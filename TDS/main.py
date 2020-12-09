@@ -39,7 +39,6 @@ fgbg = cv2.createBackgroundSubtractorMOG2(varThreshold = 250, detectShadows=Fals
 
 # Eléments structurants pour filtres morphogiques
 matriceOuverture = numpy.ones((3, 3), numpy.uint8)
-# kernelOp2 = numpy.ones((5, 5), numpy.uint8)
 matriceFermeture = numpy.ones((11, 11), numpy.uint8)
 
 # Variables
@@ -57,7 +56,6 @@ while (cap.isOpened()):
         i.temps_memoire()
 
     # Pré-traitement
-
     # Appliquer le filtre de soustraction
     fgmask = fgbg.apply(frame)
     fgmask2 = fgbg.apply(frame)
